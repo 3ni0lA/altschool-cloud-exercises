@@ -1,0 +1,2 @@
+# altschool-cloud-exercises
+exercises
