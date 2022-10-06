@@ -1,10 +1,11 @@
 Task: Setup Ubuntu 20.04 LTS on your local machine using Vagrant
 
-Instruction: 
+Instruction:
 
-    Customize your Vagrantfile as necessary with private_network set to dhcp
+1. Customize your Vagrantfile as necessary with private_network set to dhcp.
 
-    ![my vagrant file](./../images/vagrantfile.png)
+![my vagrant file](../images/vagrantfile.png)
 
-    Once the machine is up, run ifconfig and share the output in your submission along with your Vagrantfile in a folder for this exercise.
+2. Once the machine is up, run ifconfig and share the output in your submission along with your Vagrantfile in a folder for this exercise.
+
 ![my ifconfig file](./../images/ifconfig.png)
