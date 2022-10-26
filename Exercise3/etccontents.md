@@ -1,6 +1,7 @@
 #### Exercise 3 -linux deep dive
 
 ### Contents of /etc/password
+```
 root:x:0:0:root:/root:/bin/bash
 daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
@@ -38,8 +39,10 @@ lxd:x:998:100::/var/snap/lxd/common/lxd:/bin/false
 leader:x:1002:116::/home/leader:/bin/sh
 represent:x:1003:1002::/home/represent:/bin/sh
 worker:x:1004:1003::/home/worker:/bin/sh
+```
 
 ### Contents of /etc/groups
+```
 kmem:x:15:
 dialout:x:20:ubuntu
 fax:x:21:
@@ -90,8 +93,10 @@ systemd-coredump:x:999:
 ubuntu:x:1001:
 support:x:1002:
 engineering:x:1003:
+```
 
-### conten of etc/sudoers
+### Content of etc/sudoers
+```
  Host alias specification
 
 # User alias specification
@@ -141,3 +146,4 @@ root	ALL=(ALL:ALL) ALL
 # See sudoers(5) for more information on "#include" directives:
 
 #includedir /etc/sudoers.d
+```
