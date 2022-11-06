@@ -1,0 +1,44 @@
+---
+  - name: Setting up Web server
+    hosts: all
+    remote_user: root
+    become: yes
+    tasks:
+    - name: Install Apache server
+      apt:
+         name: apache2
+         state: present
+    - name: Add sample file
+      command: echo "Hello World" > /var/www/html/index.html
+  
+    - name: Update the apt packages
+      apt:
+         update_cache: yes
+         cache_valid_time: 3600
+
+    - name: Run the upgrades
+      ansible.builtin.apt:
+        upgrade: dist 
+
+    - name: Installation install software-properties-common
+      apt: name=software-properties-common
+
+    - name: Add repo
+      ansible.builtin.apt_repository:
+        repo: ppa:ondrej/php 
+        codename: trusty              
+        update_cache: no
+ 
+    - name: Installation PHP 8.1
+      apt: name=php8.1 
+
+    - name: Install lamp stack
+      ansible.builtin.apt: 
+         pkg:
+          - php8.1-cli
+          - php8.1-dev
+          - php8.1-pgsql
+          - php8.1-sqlite3
+          - php8.1-gd
+          - libapache2-mod-php 
+        
