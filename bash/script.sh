@@ -14,7 +14,7 @@ ip=$(hostname -i)
 
 # the command to overide the nginx html page
 
-echo "<h1>This is my Nginx-1 $(hostname -f)</h1>" > /var/www/html/index.nginx-debian.html 
+echo "<h1>This is my Nginx-1 server $(hostname -f)</h1>" > /var/www/html/index.nginx-debian.html 
 
 #the command to enable nginx and restart nginx
 
